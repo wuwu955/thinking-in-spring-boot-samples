@@ -1,8 +1,10 @@
 package thinking.in.spring.boot.firstappbygui;
 
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.EventListener;
@@ -26,11 +28,15 @@ public class FirstAppByGuiApplication {
 	}
 
 //    /**
-//     * {@link ApplicationRunner#run(ApplicationArguments)} 方法在
+//     * {@link ApplicationRunner#} 方法在
 //     * Spring Boot 应用启动后回调
 //     *
 //     * @param context WebServerApplicationContext
 //     * @return ApplicationRunner Bean
+//     *
+//     * UndertowWebServer 这里证明创建了但是日志 打印的是UndertowServletWebServer
+//     * 的bug(UndertowWebServer 类的日志申明)
+//     * 后续采用 web 服务器初始化监听来解决 see WebConfiguration
 //     */
 //    @Bean
 //    public ApplicationRunner runner(WebServerApplicationContext context) {

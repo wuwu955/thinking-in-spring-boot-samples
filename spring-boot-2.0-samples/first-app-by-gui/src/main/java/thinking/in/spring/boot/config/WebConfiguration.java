@@ -47,6 +47,10 @@ public class WebConfiguration {
         );
     }
 
+    /**
+     * web 服务已初始化事件监听
+     * @param event
+     */
     @EventListener(WebServerInitializedEvent.class)
     public void onWebServerReady(WebServerInitializedEvent event) {
         System.out.println("当前 WebServer 实现类为：" + event.getWebServer().getClass().getName());
