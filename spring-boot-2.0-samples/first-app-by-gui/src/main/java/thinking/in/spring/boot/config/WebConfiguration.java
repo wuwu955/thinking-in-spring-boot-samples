@@ -34,6 +34,8 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 
 /**
  * Web {@link Configuration @Configuration} 类
+ * @Configuration 注解对bean 进行CGLIB 提升 @EnableAutoConfiguration 没有
+ * 看下面的 WebConfiguration bean 实现类输出日志
  */
 @Configuration
 //@SpringBootApplication

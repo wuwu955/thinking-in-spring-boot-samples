@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.context.WebServerApplicationContext;
 import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -20,11 +21,14 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 //@Configuration
 //@ComponentScan
 @EnableAutoConfiguration
-//@SpringBootApplication(scanBasePackages = "thinking.in.spring.boot.config")
+//@SpringBootApplication(scanBasePackages = "thinking.in.spring.boot.config") //这个是扫描包
 public class FirstAppByGuiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FirstAppByGuiApplication.class, args);
+		//这里的启动类变成其他带有@SpringBootApplication 注解的类 他扫描的是他的包下的配置
+		//这个类其他注解一概没有
+//		SpringApplication.run(WebConfiguration.class, args);
 	}
 
 //    /**
