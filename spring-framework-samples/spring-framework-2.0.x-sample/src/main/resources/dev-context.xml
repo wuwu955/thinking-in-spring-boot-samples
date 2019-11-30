@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <!--开发测试都可以使用classpath*:jdbc.properties-->
+                <value>classpath:config/evn/dev/application-dev.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+        <property name="properties" ref="configProperties"/>
+    </bean>
+    <!-- dev 环境 value Bean 定义-->
+    <bean id="student" class="thinking.in.spring.boot.samples.spring2.bean.Student">
+        <property name="name" value="${st.name}"/>
+        <property name="age" value="${st.age}"/>
+    </bean>
+
+</beans>
