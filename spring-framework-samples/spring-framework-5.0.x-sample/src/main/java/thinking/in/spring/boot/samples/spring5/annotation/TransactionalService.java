@@ -33,6 +33,7 @@ import java.lang.annotation.Target;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @see Transactional
  * @see Service
+ * @see AliasFor 别名注解书216页 属性显示和隐示覆盖
  * @since 1.0.0
  */
 @Target({ElementType.TYPE})
