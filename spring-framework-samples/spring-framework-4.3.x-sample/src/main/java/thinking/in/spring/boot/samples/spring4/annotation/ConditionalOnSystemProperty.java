@@ -11,6 +11,7 @@ import java.lang.annotation.*;
  * @version 1.0.0
  * @since 1.0.0
  * @see OnSystemPropertyCondition
+ * 相当于条件为true时生效
  */
 @Target({ElementType.METHOD}) // 只能标注在方法上面
 @Retention(RetentionPolicy.RUNTIME)

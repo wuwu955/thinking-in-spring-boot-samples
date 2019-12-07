@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @version 1.0.0
  * @since 1.0.0
+ * 自定义的条件匹配规则实现
  */
 public class OnSystemPropertyCondition implements Condition {
 
