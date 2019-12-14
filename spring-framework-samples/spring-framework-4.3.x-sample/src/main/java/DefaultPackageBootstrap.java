@@ -7,7 +7,9 @@ import java.util.stream.Stream;
  * {@link ComponentScan @ComponentScan} 默认包引导类
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
- * @since 1.0.0
+ * @since 1.0.0 see page 295 扫描默认包下所有 component 和 configuration的注解及派生注解 e: service
+ * error  @EnableAsync annotation metadata was not injected 没有自动配置进去
+ *
  */
 @ComponentScan(basePackageClasses = DefaultPackageBootstrap.class)
 public class DefaultPackageBootstrap {
